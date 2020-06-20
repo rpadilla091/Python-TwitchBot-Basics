@@ -1,18 +1,10 @@
 # Python-TwitchBot-Basics
-A base structure to start a TwitchBot project on Python 3.5+, including support for chat commands, text-to-speech recognition, timeout, and banned words.
+A base structure to start a TwitchBot project on Python 3.5+ with basic text commands, you can use this example as a starter for your own TwitchBot.
 
 # How to build
-run.py has the main logic for user commands, this is the one you need to run. Please be aware that you will need to keep the code running in order to make the bot work on Twitch Chat.
+twitch_socket.py contains our TwitchIRC Chat logic Class with all the needed functions to connect our bot to Twitch, this module uses config.ini for our Bot credentials and name of channel to join. You don't need to modify anything inside this module in order for the bot to work, but feel free to explore it and improve the functionality as this is just a quick example without performance improvements.
 
-con.py has the connection settings such as Twitch key, user name and Twitch IRC parameters. You need to provide your bot Twitch key, as well as the Twitch username that the bot will be connecting.
+BotMain.py is an example of how we can use our twitch_socket module to create our own bot and react to multiple commands.
 
-tts.py has the text-to-speech logic, this code depends on gTTS library.
+config.ini is where we add our bot credentials and the name of the channel to join. 
 
-commands.py has the stored commands and functions, here you will build your commands logic.
-
-chat_message.py has the chat functions to obtain the message text and the user, as well as whisper message sender.
-
-mod.py has the chat moderation functions, including ban and timeout.
-
-#libraries required
--gTTS (for text-to-speech functionality)
